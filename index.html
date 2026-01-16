@@ -314,18 +314,11 @@ body::after {
 }
 
 
-    /* Bio */
+    
+   .twitch { grid-column: span 6; }    /* Live a tutta larghezza */
+
     .bio { grid-column: span 6; }        /* Chi sono */
-
-    /* Schedule */
-    .schedule { grid-column: span 6; }   /* Orari Stream */
    
-    .twitch { grid-column: span 12; }    /* Live a tutta larghezza */
-
-    .schedule ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
     }
 
     .schedule li {
@@ -392,8 +385,8 @@ body::after {
     }
 
     @media (max-width: 800px) {
-      .bio, .schedule { grid-column: span 12; }
-      .twitch iframe { height: 360px; }
+      .bio, { grid-column: span 12; }
+      .twitch, { height: 360px; }
     }
    
     /* Mascotte sul lato destro dello sfondo */
