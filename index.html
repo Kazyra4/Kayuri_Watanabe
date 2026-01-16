@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kayuri_Watanabe — Sito Ufficiale</title>
+  <title>Lela93 — Sito Ufficiale</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
@@ -53,13 +53,14 @@
 }
 
    :root {
-  --bg: #14081f;
---card: #1f1030;
---accent: #d98bff;
---accent-soft: #f1b7ff;
---muted: #c9a9dd;
---radius: 22px;
---fs-base: 0.95rem;
+  --bg: #071b12;            /* verde profondo */
+  --card: #0f2a20;
+  --accent: #39ffb8;        /* verde fluo firma */
+  --accent-soft: #7fffe1;   /* verde acqua dolce */
+  --text: #e8fff8;
+  --muted: #a7d7c9;
+  --radius: 22px;
+  --fs-base: 0.95rem;
 }
 
   
@@ -396,7 +397,7 @@ body::after {
       .twitch iframe { height: 360px; }
     }
    
-    /* Mascotte sul lato destro dello sfondo */
+        /* Mascotte sul lato destro dello sfondo */
 body::before {
   content: '';
   position: fixed; /* rimane sempre sullo sfondo */
@@ -425,13 +426,29 @@ body::before {
   pointer-events: none;
   z-index: 0;
 }
+
       </style>
 </head>
 <body>
   <div class="wrap">
     <header>
       <div class="brand">
-        <div class="avatar" style="background-image: url('LelaProfile.png');"></div>
+        <div class="avatar" style="background-image: url('KayuriProfile.jpg');"></div>
+        <div>
+          <h1>Kayuri Watanabe</h1>
+         <p class="subtitle">Ciao, sono Kayuri.✨</p>
+        </div>
+      </div>
+      <div class="Mascotte" style="background-image: url('Mascotte.png');"></div>
+
+    </header>
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="avatar" style="background-image: url('KayuriProfile.jpg');"></div>
         <div>
           <h1>Kayuri Watanabe</h1>
          <p class="subtitle">Ciao, sono Kayuri.✨</p>
@@ -442,7 +459,7 @@ body::before {
     </header>
 
 
- <section class="grid">
+<section class="grid">
   <div class="card-row">
     <div class="card YouTube">
       <iframe
@@ -458,10 +475,7 @@ body::before {
         </div> <!-- fine card bio -->
   </div> <!-- fine card-row -->
 
-    
-    
-   
-  <!-- Seguimi -->
+<!-- Seguimi -->
   <div class="card socials">
     <h2>Social</h2>
     <div class="social-grid">
