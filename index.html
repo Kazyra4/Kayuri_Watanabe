@@ -404,7 +404,7 @@ body::before {
   right: 0;
   bottom: 0;
   width: 25%; /* quanto spazio occupa a destra */
-  background-image: url('mascotte.png'); /* il file della mascotte */
+  background-image: url('Mascotte.png'); /* il file della mascotte */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right bottom; /* lato destro inferiore */
@@ -439,7 +439,7 @@ body::before {
          <p class="subtitle">Ciao, Sono kayuri e questo è il mio Sito ufficiale. Qui trovi tutti i miei social e ciò che faccio.✨</p>
         </div>
       </div>
-      <div class="mascotte" style="background-image: url('mascotte.png');"></div>
+      <div class="Mascotte" style="background-image: url('Mascotte.png');"></div>
 
     </header>
 
@@ -488,60 +488,54 @@ body::before {
   <canvas id="backgroundCanvas"></canvas>
    <!-- Script per animare lo sfondo -->
   <script>
-    // Tutto il codice JS che ti ho dato prima
-    const canvas = document.getElementById('backgroundCanvas');
-    const ctx = canvas.getContext('2d');
-    let width = canvas.width = window.innerWidth;
-    let height = canvas.height = window.innerHeight;
+  const canvas = document.getElementById('backgroundCanvas');
+  const ctx = canvas.getContext('2d');
+  let width = canvas.width = window.innerWidth;
+  let height = canvas.height = window.innerHeight;
 
-    const particles = [];
-    const numParticles = 100;
+  const particles = [];
+  const numParticles = 100;
 
-    for (let i = 0; i < numParticles; i++) {
-      particles.push({
-        x: Math.random() * width,
-        y: Math.random() * height,
-        radius: Math.random() * 2 + 1,
-        color: Math.random() < 0.5 ? '#66FF99' : '#CCFF99',
-        dx: (Math.random() - 0.5) * 0.5,
-        dy: (Math.random() - 0.5) * 0.5
-      });
-    }
-
-    function draw() {
-      const grad = ctx.createRadialGradient(width/2, height/2, 0, width/2, height/2, width/1.5);
-      grad.addColorStop(0, '#00FF66'); 
-      grad.addColorStop(0.3, '#009933');
-      grad.addColorStop(1, '#001F00');
-
-      ctx.fillStyle = grad;
-      ctx.fillRect(0, 0, width, height);
-
-      particles.forEach(p => {
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        ctx.fillStyle = p.color;
-        ctx.shadowColor = p.color;
-        ctx.shadowBlur = 10;
-        ctx.fill();
-
-        p.x += p.dx;
-        p.y += p.dy;
-
-        if (p.x < 0 || p.x > width) p.dx *= -1;
-        if (p.y < 0 || p.y > height) p.dy *= -1;
-      });
-
-      requestAnimationFrame(draw);
-    }
-
-    draw();
-
-    window.addEventListener('resize', () => {
-      width = canvas.width = window.innerWidth;
-      height = canvas.height = window.innerHeight;
+  for (let i = 0; i < numParticles; i++) {
+    particles.push({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      radius: Math.random() * 2 + 1,
+      color: Math.random() < 0.5 ? '#D98BFF' : '#F1B7FF',
+      dx: (Math.random() - 0.5) * 0.5,
+      dy: (Math.random() - 0.5) * 0.5
     });
-    </script>
+  }
+
+  function draw() {
+    const grad = ctx.createRadialGradient(
+      width / 2,
+      height / 2,
+      0,
+      width / 2,
+      height / 2,
+      width / 1.5
+    );
+
+    grad.addColorStop(0, '#F1B7FF');   // centro luminoso rosa
+    grad.addColorStop(0.3, '#8E5DCC'); // viola diffuso
+    grad.addColorStop(1, '#14081F');   // bordo scuro viola
+
+    ctx.fillStyle = grad;
+    ctx.fillRect(0, 0, width, height);
+
+    particles.forEach(p => {
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+      ctx.fillStyle = p.color;
+      ctx.shadowColor = p.color;
+      ctx.shadowBlur = 12;
+      ctx.fill();
+
+      p.x += p.dx;
+      p.y += p.dy;
+
+      if (p.x < 0 || p.x
 
 </section>
 
