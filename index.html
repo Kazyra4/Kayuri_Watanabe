@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lela93 — Sito Ufficiale</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    .status {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 2px 10px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 12px;
+  background-color: rgba(255,255,255,0.1);
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+    <head>
+  <meta charset="UTF-8">
+  <title>Il tuo sito</title>
+  
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    #backgroundCanvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      display: block;
+    }
+
+.status.live {
+  background-color: #27f2b2;
+  color: #0f1f1b;
+}
+
+.status.offline {
+  background-color: rgba(255,255,255,0.1);
+  color: var(--muted);
+}
+
+   :root {
+  --bg: #071b12;            /* verde profondo */
+  --card: #0f2a20;
+  --accent: #39ffb8;        /* verde fluo firma */
+  --accent-soft: #7fffe1;   /* verde acqua dolce */
+  --text: #e8fff8;
+  --muted: #a7d7c9;
+  --radius: 22px;
+  --fs-base: 0.95rem;
+}
+
+  
+    * { box-sizing: border-box; }
+
+  body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  font-size: var(--fs-base);
+  color: var(--text);
+  min-height: 100svh;
+  padding: 24px;
+  overflow-x: hidden;
+
+background:
+    radial-gradient(900px 500px at 50% -10%, rgba(57,255,184,0.35), transparent 65%),
+    linear-gradient(180deg, #05150c 0%, var(--bg) 100%);
+    repeating-linear-gradient(
+      45deg,
+      rgba(62,255,160,0.15),
+      rgba(62,255,160,0.15) 2px,
+      transparent 2px,
+      transparent 8px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      rgba(62,255,160,0.15),
+      rgba(62,255,160,0.15) 2px,
+      transparent 2px,
+      transparent 8px
+    );
+
+  background-blend-mode: overlay;
+  position: relative;
+  animation: moveLines 30s linear infinite;
+}
+
+
+/* Linee animate */
+@keyframes moveLines {
+  0% { background-position: 0 0, 0 0, 0 0, 0 0; }
+  100% { background-position: 120px 120px, -120px -120px, 60px 60px, -60px -60px; }
+}
+
+/* Puntini e stelline lampeggianti/fluttuanti */
+body::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  z-index: 0;
+
+  background:
+    radial-gradient(circle at 5% 10%, rgba(62,255,160,0.6) 2px, transparent 3px),
+    radial-gradient(circle at 15% 40%, rgba(62,255,160,0.5) 1.5px, transparent 2.5px),
+    radial-gradient(circle at 25% 70%, rgba(62,255,160,0.7) 3px, transparent 4px),
+    radial-gradient(circle at 35% 20%, rgba(62,255,160,0.4) 1px, transparent 2px),
+    radial-gradient(circle at 45% 50%, rgba(62,255,160,0.6) 2.5px, transparent 3.5px),
+    radial-gradient(circle at 55% 80%, rgba(62,255,160,0.5) 2px, transparent 3px),
+    radial-gradient(circle at 65% 30%, rgba(62,255,160,0.6) 1.5px, transparent 2.5px),
+    radial-gradient(circle at 75% 60%, rgba(62,255,160,0.7) 2px, transparent 3px),
+    radial-gradient(circle at 85% 10%, rgba(62,255,160,0.5) 1px, transparent 2px),
+    radial-gradient(circle at 10% 15%, rgba(62,255,160,0.8) 3px, transparent 4px),
+    radial-gradient(circle at 20% 60%, rgba(62,255,160,0.7) 2px, transparent 3px),
+    radial-gradient(circle at 30% 35%, rgba(62,255,160,0.9) 2.5px, transparent 3.5px),
+    radial-gradient(circle at 50% 15%, rgba(62,255,160,0.8) 3px, transparent 4px),
+    radial-gradient(circle at 60% 50%, rgba(62,255,160,0.7) 2px, transparent 3px),
+    radial-gradient(circle at 70% 75%, rgba(62,255,160,0.9) 2.5px, transparent 3.5px),
+    radial-gradient(circle at 80% 20%, rgba(62,255,160,0.8) 3px, transparent 4px);
+
+  animation: blinkDots 4s infinite alternate, floatDots 8s infinite linear;
+}
+
+/* Puntini lampeggianti */
+@keyframes blinkDots {
+  0% { opacity: 0.3; }
+  10% { opacity: 0.8; }
+  20% { opacity: 0.5; }
+  30% { opacity: 1; }
+  40% { opacity: 0.6; }
+  50% { opacity: 0.9; }
+  60% { opacity: 0.5; }
+  70% { opacity: 1; }
+  80% { opacity: 0.4; }
+  90% { opacity: 0.8; }
+  100% { opacity: 0.3; }
+}
+
+/* Leggero movimento dei puntini/fluttuazione */
+@keyframes floatDots {
+  0% { transform: translate(0px, 0px); }
+  25% { transform: translate(3px, -2px); }
+  50% { transform: translate(-2px, 3px); }
+  75% { transform: translate(2px, -3px); }
+  100% { transform: translate(0px, 0px); }
+}
+
+
+
+   .wrap {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;   /* centra orizzontalmente */
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+
+    /* Header */
+    header {
+      background: linear-gradient(180deg, #16342c, var(--card));
+      border-radius: var(--radius);
+      padding: 20px 22px;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .avatar {
+  width: 100%;           /* si adatta al contenitore */
+  max-width: 80px;       /* dimensione massima su desktop */
+  aspect-ratio: 1 / 1;   /* sempre proporzioni corrette */
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 0 3px rgba(39,242,178,.2);
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Mobile tweaks */
+@media (max-width: 800px) {
+  .avatar {
+    max-width: 72px;      /* leggero aumento su telefoni */
+  }
+}
+
+@media (max-width: 500px) {
+  .avatar {
+    max-width: 64px;      /* si restringe leggermente su telefoni stretti */
+  }
+}
+
+
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-4px); }
+    }
+
+    h1 {
+  margin: 0;
+  font-family: 'Comfortaa', cursive;
+  font-weight: 700;
+  letter-spacing: .6px;
+  font-size: 1.6rem;
+  color: var(--accent); /* verde fluo */
+  text-shadow:
+    0 0 6px rgba(57,255,184,0.6),
+    0 0 14px rgba(57,255,184,0.4);
+}
+
+
+    .subtitle {
+      margin: 6px 0 0 0;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+
+    .cta {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      background: rgba(39,242,178,.15);
+      border: 1px solid rgba(39,242,178,.35);
+      color: var(--text);
+      padding: 8px 14px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+    }
+
+   .btn:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 12px rgba(57,255,184,0.6),
+    0 0 24px rgba(57,255,184,0.4);
+}
+
+
+
+    /* Grid sections */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 18px;
+    }
+
+   .card {
+  background: linear-gradient(
+    180deg,
+    rgba(20, 48, 40, 0.85),
+    rgba(20, 45, 31, 0.9)
+  );
+  backdrop-filter: blur(6px);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: 
+    0 10px 30px rgba(0,0,0,.35),
+    0 0 24px rgba(57,255,184,0.35);
+  border: 1px solid rgba(57,255,184,0.25);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+    .card:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 14px 40px rgba(0,0,0,.45),
+    0 0 28px rgba(57,255,184,0.45);
+  border-color: rgba(57,255,184,0.45);
+}
+
+
+
+    .card h2 {
+  margin: 0 0 10px 0;
+  font-family: 'Comfortaa', cursive;
+  font-size: 1.2rem;
+  letter-spacing: .4px;
+  color: var(--accent);
+  text-shadow:
+    0 0 8px rgba(57,255,184,0.6),
+    0 0 16px rgba(127,255,225,0.4);
+}
+
+    .orari-note {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+
+    /* Bio */
+    .bio { grid-column: span 6; }        /* Chi sono */
+
+    /* Schedule */
+    .schedule { grid-column: span 6; }   /* Orari Stream */
+   
+    .twitch { grid-column: span 12; }    /* Live a tutta larghezza */
+
+    .schedule ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .schedule li {
+      display: flex;
+      justify-content: space-between;
+      padding: 6px 0;
+      border-bottom: 1px dashed rgba(255,255,255,.1);
+      color: var(--muted);
+    }
+
+    .schedule li strong { color: var(--text); }
+
+    /* Social */
+    .socials { grid-column: span 12; }
+
+    .social-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+    }
+
+    .social {
+      background: rgba(39,242,178,.08);
+      border: 1px solid rgba(39,242,178,.25);
+      border-radius: 16px;
+      padding: 12px 14px;
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: transform .15s ease, background .15s ease, box-shadow .15s ease;
+    }
+
+    .social:hover {
+  transform: translateY(-2px) scale(1.02);
+  background: rgba(57,255,184,.2);
+  box-shadow: 
+    0 8px 18px rgba(57,255,184,.25),
+    0 0 14px var(--accent-light);
+}
+
+
+
+    /* Twitch embed */
+    .twitch { grid-column: span 12; padding: 0; overflow: hidden; }
+
+    .twitch iframe {
+  width: 100%;
+  height: 340px;
+  border: 2px solid var(--accent);
+  border-radius: var(--radius);
+  box-shadow: 0 0 20px var(--accent-light);
+}
+
+
+    /* Footer */
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: .85rem;
+      padding: 10px;
+    }
+
+    @media (max-width: 800px) {
+      .bio, .schedule { grid-column: span 12; }
+      .twitch iframe { height: 360px; }
+    }
+   
+    /* Mascotte sul lato destro dello sfondo */
+body::before {
+  content: '';
+  position: fixed; /* rimane sempre sullo sfondo */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 25%; /* quanto spazio occupa a destra */
+  background-image: url('mascotte.png'); /* il file della mascotte */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right bottom; /* lato destro inferiore */
+  opacity: 0.50; /* trasparenza per non disturbare */
+  pointer-events: none; /* non interferisce con click o scroll */
+  z-index: 0;
+}
+    body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(rgba(57,255,184,0.15) 1px, transparent 1px),
+    radial-gradient(rgba(127,255,225,0.12) 1px, transparent 1px);
+  background-size: 60px 60px, 120px 120px;
+  background-position: 0 0, 30px 30px;
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: 0;
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="avatar" style="background-image: url('LelaProfile.png');"></div>
+        <div>
+          <h1>Lela93</h1>
+         <p class="subtitle">Ciao, Sono Lela e questo è il mio Sito ufficiale. Qui trovi tutti i miei social, gli orari stream e tanto altro.✨</p>
+        </div>
+      </div>
+      <div class="mascotte" style="background-image: url('mascotte.png');"></div>
+
+    </header>
+
+ <section class="grid">
+
+  <!-- Live Twitch (IN ALTO, A TUTTA LARGHEZZA) -->
+  <div class="card twitch">
+    <iframe 
+      src="https://player.twitch.tv/?channel=lela93&parent=kazyra4.github.io" 
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <!-- Chi sono (SOTTO LA LIVE) -->
+  <div class="card bio">
+    <h2>Chi sono</h2>
+    <p>
+      Hey! Sono Lela. Variety Streamer. Ogni live è un’occasione per divertirci insieme, ridere, chiacchierare e condividere. Il mio obiettivo? Farvi sentire parte di qualcosa di speciale 💜 ⋆ Da me sarete sempre i benvenuti. Questa è il mio contatto per collab.⋆*:･ﾟ✧ ► Email : lela93twitch@gmail.com
+    </p>
+  </div>
+
+  <!-- Orari Stream (ACCANTO a Chi sono) -->
+  <div class="card schedule">
+    <h2>Orari Stream <span class="orari-note">— (in caso di variazioni, avviso su Instagram)</span></h2>
+   <ul>
+      <li><strong>Lunedì</strong> <span>13:00 – 17:00</span></li>
+      <li><strong>Martedì</strong> <span>13:00 – 17:00</span></li>
+      <li><strong>Mercoledì</strong> <span>13:00 – 17:00</span></li>
+      <li><strong>Giovedì</strong> <span>13:00 – 17:00</span></li>
+      <li><strong>Venerdì</strong> <span>13:00 – 17:00</span></li>
+    </ul>
+  </div>
+
+  <!-- Seguimi -->
+  <div class="card socials">
+    <h2>Seguimi</h2>
+    <div class="social-grid">
+      <a class="social" href="https://www.twitch.tv/lela93" target="_blank">Twitch <span>→</span></a>
+      <a class="social" href="https://www.youtube.com/@itsLela93" target="_blank">YouTube <span>→</span></a>
+      <a class="social" href="https://www.tiktok.com/@itslela93" target="_blank">TikTok <span>→</span></a>
+      <a class="social" href="https://www.instagram.com/_lela93/" target="_blank">Instagram <span>→</span></a>
+    </div>
+  </div>
+
+  <!-- Wishlist / Support -->
+  <div class="card socials">
+    <h2>Wishlist / Support</h2>
+    <p style="margin: 6px 0 12px 0; color: var(--muted); font-size: 0.85rem;">
+      Se vuoi supportarmi o vedere cosa desidero, qui trovi le mie wishlist e i link per sostenermi! 💖
+    </p>
+    <div class="social-grid">
+      <a class="social" href="https://www.amazon.it/hz/wishlist/ls/3D5N2Q6T7UYL8/ref=nav_wishlist_lists_1" target="_blank">Amazon Wishlist <span>→</span></a>
+      <a class="social" href="https://store.steampowered.com/wishlist/id/lela93/?sort=dateadded" target="_blank">Steam Wishlist <span>→</span></a>
+      <a class="social" href="https://www.paypal.com/paypalme/Lela93YT" target="_blank">PayPal <span>→</span></a>
+    </div>
+  </div>
+   
+  <canvas id="backgroundCanvas"></canvas>
+   <!-- Script per animare lo sfondo -->
+  <script>
+    // Tutto il codice JS che ti ho dato prima
+    const canvas = document.getElementById('backgroundCanvas');
+    const ctx = canvas.getContext('2d');
+    let width = canvas.width = window.innerWidth;
+    let height = canvas.height = window.innerHeight;
+
+    const particles = [];
+    const numParticles = 100;
+
+    for (let i = 0; i < numParticles; i++) {
+      particles.push({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        radius: Math.random() * 2 + 1,
+        color: Math.random() < 0.5 ? '#66FF99' : '#CCFF99',
+        dx: (Math.random() - 0.5) * 0.5,
+        dy: (Math.random() - 0.5) * 0.5
+      });
+    }
+
+    function draw() {
+      const grad = ctx.createRadialGradient(width/2, height/2, 0, width/2, height/2, width/1.5);
+      grad.addColorStop(0, '#00FF66'); 
+      grad.addColorStop(0.3, '#009933');
+      grad.addColorStop(1, '#001F00');
+
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, 0, width, height);
+
+      particles.forEach(p => {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+        ctx.fillStyle = p.color;
+        ctx.shadowColor = p.color;
+        ctx.shadowBlur = 10;
+        ctx.fill();
+
+        p.x += p.dx;
+        p.y += p.dy;
+
+        if (p.x < 0 || p.x > width) p.dx *= -1;
+        if (p.y < 0 || p.y > height) p.dy *= -1;
+      });
+
+      requestAnimationFrame(draw);
+    }
+
+    draw();
+
+    window.addEventListener('resize', () => {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    });
+    </script>
+
+</section>
+
+
+    <footer>
+      © 2026 Lela93 — Tutti i diritti riservati
+    </footer>
+  </div>
+ 
+  
+</body>
+</html>
