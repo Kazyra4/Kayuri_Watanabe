@@ -273,26 +273,33 @@ body::after {
    .card {
   background: linear-gradient(
     180deg,
-    rgba(20, 48, 40, 0.85),
-    rgba(20, 45, 31, 0.9)
+    rgba(88, 36, 120, 0.85),
+    rgba(44, 18, 64, 0.92)
   );
   backdrop-filter: blur(6px);
   border-radius: var(--radius);
   padding: 18px;
-  box-shadow: 
-    0 10px 30px rgba(0,0,0,.35),
-    0 0 24px rgba(57,255,184,0.35);
-  border: 1px solid rgba(57,255,184,0.25);
+
+  box-shadow:
+    0 12px 30px rgba(140, 80, 200, 0.45),
+    0 0 26px rgba(217, 139, 255, 0.45);
+
+  border: 1px solid rgba(217, 139, 255, 0.35);
+
   transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
 }
 
+
     .card:hover {
   transform: translateY(-3px);
+
   box-shadow:
-    0 14px 40px rgba(0,0,0,.45),
-    0 0 28px rgba(57,255,184,0.45);
-  border-color: rgba(57,255,184,0.45);
+    0 16px 42px rgba(160, 90, 220, 0.55),
+    0 0 34px rgba(241, 183, 255, 0.6);
+
+  border-color: rgba(241, 183, 255, 0.65);
 }
+
 
 
 
